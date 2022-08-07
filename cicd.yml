@@ -1,5 +1,5 @@
 ---
-- host: web
+- hosts: web
   become: True
   tasks:
     - name: Start the container
