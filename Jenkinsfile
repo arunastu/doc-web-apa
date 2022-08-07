@@ -40,7 +40,7 @@ pipeline
         {
             steps
             {
-                ansiblePlaybook become: true, credentialsId: 'sshpwd', disableHostKeyChecking: true, installation: 'Ansible',  inventory: 'cicd.inv', playbook: 'cicd.yml'
+                ansiblePlaybook become: true, credentialsId: 'sshpwd', disableHostKeyChecking: true, installation: 'Ansible', extras: "-e DOCKER_TAG=${DOCKER_TAG}",  inventory: 'cicd.inv', playbook: 'cicd.yml'
             }
         }
     }
