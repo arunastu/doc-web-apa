@@ -7,6 +7,6 @@
         name: webserver
         image: "arunastu/mywebapp:${DOCKER_TAG}"
         state: started
-        Peblished_ports:
+        Published_ports:
           - 0.0.0.0:80:80
 ...
