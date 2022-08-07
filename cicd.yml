@@ -4,12 +4,12 @@
   tasks:
     - name: Install python pip
       apt:
-        name: python pip
+        name: python-pip
         state: present
     - name: Install docker-py python module
       pip:
         name: docker-py
-        state: presen
+        state: present
     - name: Start the container
       docker_container:
         name: webserver
