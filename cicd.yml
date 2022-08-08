@@ -1,5 +1,6 @@
 ---
-- hosts: web
+#- hosts: web
+- hosts: AWS
   become: True
   tasks:
     - name: Install python pip
