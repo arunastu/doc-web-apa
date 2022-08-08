@@ -1,0 +1,14 @@
+---
+#- hosts: web
+- hosts: AWS
+  become: True
+  tasks:
+    - name: Start the container
+      docker_container:
+        name: webserver
+        image: "arunastu/mywebapp:{{DOCKER_TAG}}"
+        #image: "arunastu/mywebapp:61d49a7"
+        state: started
+        ports:
+          - "80:80"
+...
