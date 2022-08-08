@@ -5,7 +5,7 @@
   tasks:
     - name: Install python pip
       apt:
-        name: python-pip
+        name: python34-pip
         state: present
     - name: Install docker-py python module
       pip:
